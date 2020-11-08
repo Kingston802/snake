@@ -26,5 +26,7 @@ python3 snake.py
 You play as the white square. 
 You can use the arrow keys or practice your vim skills and use HJKL! 
 
+When you die press any key (except q) to restart. 
+
 Press q to quit at any time. 
 
