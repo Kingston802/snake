@@ -256,6 +256,8 @@ while not done:
         # We want the speed to be enough that we move a full
         # segment, plus the margin.
         if event.type == pygame.KEYDOWN: # added ability to use WASD/HJKL as alternate controls
+            if event.key == pygame.K_q:
+                quit()
             if event.key in [pygame.K_LEFT, pygame.K_a, pygame.K_h] and my_snake.x_change != (segment_width + segment_margin): # changed it so you can't go back on yourself by pressing the opposite direction
                 my_snake.x_change = (segment_width + segment_margin) * -1
                 my_snake.y_change = 0
@@ -334,7 +336,7 @@ while not done:
         
         while True: # allow replay by any keypress
             event = pygame.event.wait()
-            if event.type == pygame.QUIT: # allow quit 
+            if event.type == pygame.QUIT or event.key == pygame.K_q: # allow quit 
                 quit()
             elif event.type == pygame.KEYDOWN: # wait for any event (keypress/mouse move)
                 set_initial_conditions() # reset
