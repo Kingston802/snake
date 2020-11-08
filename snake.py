@@ -322,14 +322,14 @@ while not done:
         font = pygame.font.SysFont("comicsansms", 50)
         text = font.render(str(score), True, (0, 0, 0), None)
         textrect = text.get_rect()
-        textrect.x,textrect.y = 5, height-12
+        textrect.x,textrect.y = 5, height
         screen.blit(text, textrect)
             
     else:
         font = pygame.font.SysFont("comicsansms", 50)
         text = font.render("Game Over", True, (255, 0, 0), None)
         gorect = text.get_rect()
-        gorect.x,gorect.y = 180, height-12
+        gorect.x,gorect.y = 180, height
 
         screen.blit(text, gorect)
         pygame.display.flip() # display game over message
